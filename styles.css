@@ -2320,3 +2320,383 @@ p, .hero-description, .services-desc, .cta-desc {
     fill: #131313 !important;
     stroke: #131313 !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE  (≤ 768 px)
+   Desktop / tablet styles above are completely untouched.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* ── Body ── */
+    body {
+        /* Remove custom cursor on mobile – it never feels right on touch */
+        cursor: auto;
+    }
+
+    /* ── Header triple-pill → single compact bar ── */
+    .logo-widget {
+        top: 12px;
+        left: 12px;
+        height: 44px;
+        padding: 0 16px;
+    }
+
+    .logo-widget .logo-text {
+        display: none; /* icon only on small screens */
+    }
+
+    .site-header {
+        top: 12px;
+        max-width: calc(100vw - 120px); /* give room for logo & lang widgets */
+        padding: 0;
+    }
+
+    .header-bar {
+        height: 44px;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .main-nav {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    /* Hide the "Get Started" pill in the header on mobile – too crowded */
+    .header-actions .btn-dark-pill {
+        display: none;
+    }
+
+    .lang-toggle-widget {
+        top: 12px;
+        right: 12px;
+        height: 44px;
+    }
+
+    .lang-option {
+        width: 36px;
+        font-size: 12px;
+    }
+
+    /* ── Hero ── */
+    .rounded-sky-card {
+        margin: 4px;
+        border-radius: 28px;
+    }
+
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        min-height: 85vh;
+    }
+
+    .hero-centered-container {
+        padding: 0 8px;
+    }
+
+    .hero-title.centered-title {
+        font-size: clamp(32px, 10vw, 52px);
+        margin-bottom: 24px;
+    }
+
+    .hero-description.centered-desc {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .hero-actions.centered-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 48px;
+        width: 100%;
+    }
+
+    .btn-hero-demo,
+    .btn-hero-call {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-hero-call {
+        padding: 8px 8px 8px 24px;
+    }
+
+    /* ── Trust marquee ── */
+    .hero-trust-container {
+        padding: 32px 0;
+    }
+
+    /* ── Stats / About ── */
+    .stats-section {
+        padding: 60px 0;
+    }
+
+    .stats-header {
+        margin-bottom: 36px;
+        padding: 0 8px;
+    }
+
+    .stats-title {
+        font-size: clamp(24px, 7vw, 36px);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* The blue card normally spans 2 rows – reset on mobile */
+    .card-blue {
+        grid-row: auto;
+        min-height: 280px;
+        padding: 24px 16px 16px;
+    }
+
+    .card-portrait {
+        width: 80%;
+        transform: translateY(-16px);
+    }
+
+    .card-blue .card-logo {
+        font-size: 18px;
+        padding: 0 16px;
+    }
+
+    /* Grey card spans 2 cols on desktop – reset */
+    .card-grey {
+        grid-column: auto;
+    }
+
+    .card-number {
+        font-size: 44px;
+    }
+
+    .card-number-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .card-graph {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* ── Pain points ── */
+    /* Already handled above at 768px, but ensure section doesn't have huge height */
+    .pain-points {
+        height: auto;
+    }
+
+    .pain-sticky-wrapper {
+        position: relative;
+        height: auto;
+        min-height: unset;
+        padding: 60px 0;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pain-scatter-container {
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .pain-card {
+        position: relative !important;
+        top: auto !important; left: auto !important;
+        right: auto !important; bottom: auto !important;
+        transform: rotate(0deg) !important;
+        opacity: 1 !important;
+        width: 100%;
+        max-width: 100%;
+        pointer-events: auto;
+    }
+
+    .pain-title {
+        order: -1;
+        opacity: 1 !important;
+        transform: none !important;
+        font-size: clamp(28px, 8vw, 44px);
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    /* ── Services ── */
+    .services {
+        padding: 60px 0;
+    }
+
+    .services-top {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    /* Override all explicit grid placements */
+    .services-grid .service-card:nth-child(1),
+    .services-grid .service-card:nth-child(2),
+    .services-grid .service-card:nth-child(3),
+    .services-grid .service-card:nth-child(4),
+    .services-grid .service-card:nth-child(5) {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+
+    .service-card {
+        padding: 24px;
+    }
+
+    /* ── Case studies ── */
+    .case-studies {
+        padding: 60px 0 16px;
+    }
+
+    .case-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        margin-bottom: 32px;
+    }
+
+    .case-content,
+    .case-info {
+        padding: 32px 24px;
+    }
+
+    .case-image-wrapper,
+    .case-image {
+        width: 100%;
+        height: 240px;
+    }
+
+    .case-title {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    /* ── Pricing ── */
+    .pricing {
+        padding: 24px 0 60px;
+    }
+
+    .pricing-grid-final {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .pricing-card-final {
+        padding: 36px 24px;
+        min-height: auto;
+        border-radius: 24px;
+    }
+
+    .price-val {
+        font-size: 36px;
+    }
+
+    /* ── Footer ── */
+    .footer-rounded-card {
+        border-radius: 28px 28px 0 0;
+        margin: 8px 8px 0 8px;
+        padding: 52px 24px 32px;
+    }
+
+    .footer-main-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        border-radius: 16px;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .newsletter-input {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .btn-newsletter-submit {
+        border-radius: 8px;
+        padding: 12px 24px;
+    }
+
+    .footer-primitive-bottom {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* ── Section utilities ── */
+    .section-title {
+        font-size: clamp(28px, 8vw, 44px);
+    }
+
+    .section-header {
+        margin-bottom: 12px;
+    }
+}
+
+/* Very small screens (≤ 420 px) */
+@media (max-width: 420px) {
+
+    /* Collapse the centre nav completely on tiny phones */
+    .site-header {
+        display: none;
+    }
+
+    /* Show logo & lang only */
+    .logo-widget {
+        top: 12px;
+        left: 12px;
+    }
+
+    .lang-toggle-widget {
+        top: 12px;
+        right: 12px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-title.centered-title {
+        font-size: clamp(28px, 11vw, 40px);
+    }
+
+    .stats-card {
+        padding: 24px 16px;
+    }
+
+    .card-number {
+        font-size: 36px;
+    }
+
+    .pricing-card-final {
+        padding: 28px 16px;
+    }
+
+    .footer-rounded-card {
+        padding: 40px 16px 24px;
+        margin: 4px 4px 0 4px;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
