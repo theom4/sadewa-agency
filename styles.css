@@ -11,14 +11,14 @@
     --color-text: #131313;
     --color-text-light: #666;
     --color-text-white: #FFFFFF;
-    --color-accent: #DAFF00;
-    --color-accent-dark: #B8D900;
+    --color-accent: #7DD3FC;
+    --color-accent-dark: #38BDF8;
     --color-border: #E0E0DC;
     --color-border-dark: #333;
     --color-warning: #E8A500;
     --color-card-bg: #EAEAE6;
 
-    --color-text-green: #008659;
+    --color-text-green: #38BDF8;
 
     --font-primary: 'Playfair Display', serif;
     --font-heading: 'Playfair Display', serif;
@@ -2164,7 +2164,7 @@ p, .hero-description, .services-desc, .cta-desc {
     stroke-width: 1.5;
 }
 
-.lime-bg { background: #D4FF5F; }
+.lime-bg { background: #7DD3FC; }
 .black-bg { background: #131313; color: white; }
 
 .plan-label {
@@ -2215,8 +2215,8 @@ p, .hero-description, .services-desc, .cta-desc {
     position: absolute;
     width: 8px;
     height: 4px;
-    border-left: 2px solid #D4FF5F;
-    border-bottom: 2px solid #D4FF5F;
+    border-left: 2px solid #7DD3FC;
+    border-bottom: 2px solid #7DD3FC;
     transform: rotate(-45deg);
     top: 6px;
     left: 5px;
@@ -2224,7 +2224,7 @@ p, .hero-description, .services-desc, .cta-desc {
 
 .btn-pricing-cta-final {
     background: #131313;
-    color: #D4FF5F;
+    color: #7DD3FC;
     text-align: center;
     padding: 18px;
     border-radius: 50px;
@@ -2287,7 +2287,7 @@ p, .hero-description, .services-desc, .cta-desc {
 }
 
 .btn-newsletter-submit {
-    background: #D4FF5F;
+    background: #7DD3FC;
     color: #131313;
     border: none;
     padding: 12px 32px;
@@ -2349,7 +2349,7 @@ p, .hero-description, .services-desc, .cta-desc {
 
     /* ── Header stacked vertically ── */
     .site-header {
-        top: 10px;
+        top: 12px;
         left: 0;
         right: 0;
         transform: none;
@@ -2357,6 +2357,7 @@ p, .hero-description, .services-desc, .cta-desc {
         width: 95vw;
         max-width: none;
         padding: 0;
+        z-index: 1200; /* Ensure header is on top of everything */
     }
 
     .header-bar {
@@ -2379,10 +2380,11 @@ p, .hero-description, .services-desc, .cta-desc {
     }
 
     .logo-widget {
-        top: 64px; /* Below the header (10px gap) */
+        top: 80px; /* Below the header with more space */
         left: 12px;
         height: 44px;
         padding: 0 16px;
+        z-index: 1100;
     }
 
     .logo-widget .logo-text {
@@ -2390,9 +2392,10 @@ p, .hero-description, .services-desc, .cta-desc {
     }
 
     .lang-toggle-widget {
-        top: 64px; /* Below the header (10px gap) */
+        top: 80px; /* Below the header with more space */
         right: 12px;
         height: 44px;
+        z-index: 1100;
     }
 
     .lang-option {
@@ -2436,8 +2439,10 @@ p, .hero-description, .services-desc, .cta-desc {
 
     .btn-hero-demo,
     .btn-hero-call {
-        width: 100%;
+        width: 90%; /* Center and narrower */
+        max-width: 320px;
         justify-content: center;
+        margin: 0 auto;
     }
 
     .btn-hero-call {
