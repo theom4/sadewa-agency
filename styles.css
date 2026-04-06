@@ -2439,8 +2439,8 @@ p, .hero-description, .services-desc, .cta-desc {
 
     .btn-hero-demo,
     .btn-hero-call {
-        width: 90%; /* Center and narrower */
-        max-width: 320px;
+        width: 70%; /* Even narrower */
+        max-width: 260px;
         justify-content: center;
         margin: 0 auto;
     }
