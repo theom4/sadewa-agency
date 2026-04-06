@@ -1909,6 +1909,10 @@ h2, h3 {
     color: #F5D060; /* Specific Golden Yellow for the Hero Title */
 }
 
+#services-title .accent-italic {
+    color: #7DD3FC; /* Lighter Blue for "that drive results" */
+}
+
 /* Base Overlines styling */
 .section-label,
 .trust-label {
@@ -2317,6 +2321,7 @@ p, .hero-description, .services-desc, .cta-desc {
 .hero-trust-container {
     padding: 60px 0;
     background: #FFFFFF;
+    overflow: hidden; /* Prevent horizontal overflow from marquee */
 }
 
 .hero-trust-container .mock-logo svg * {
@@ -2331,6 +2336,12 @@ p, .hero-description, .services-desc, .cta-desc {
 @media (max-width: 768px) {
 
     /* ── Body ── */
+    html, body {
+        overflow-x: hidden; /* Strict horizontal overflow blocking on mobile */
+        width: 100%;
+        position: relative;
+    }
+
     body {
         /* Remove custom cursor on mobile – it never feels right on touch */
         cursor: auto;
