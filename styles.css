@@ -2349,8 +2349,13 @@ p, .hero-description, .services-desc, .cta-desc {
 
     /* ── Header stacked vertically ── */
     .site-header {
-        top: 12px;
-        max-width: calc(100vw - 24px); /* Full width on mobile */
+        top: 10px;
+        left: 0;
+        right: 0;
+        transform: none;
+        margin: 0 auto;
+        width: 95vw;
+        max-width: none;
         padding: 0;
     }
 
@@ -2374,7 +2379,7 @@ p, .hero-description, .services-desc, .cta-desc {
     }
 
     .logo-widget {
-        top: 68px; /* Below the header */
+        top: 64px; /* Below the header (10px gap) */
         left: 12px;
         height: 44px;
         padding: 0 16px;
@@ -2385,7 +2390,7 @@ p, .hero-description, .services-desc, .cta-desc {
     }
 
     .lang-toggle-widget {
-        top: 68px; /* Below the header */
+        top: 64px; /* Below the header (10px gap) */
         right: 12px;
         height: 44px;
     }
